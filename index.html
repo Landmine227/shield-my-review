@@ -42,6 +42,8 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
         }
 
         .nav-brand {
@@ -49,7 +51,7 @@
             font-weight: 700;
             color: var(--primary-color);
             text-transform: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         .nav-links { display: flex; gap: 25px; }
@@ -172,32 +174,32 @@
     <div id="onboarding-section" class="view-section active">
         <header>
             <h1>Select Your Operational Sector</h1>
-            <p class="subtitle">Our legal reputation models align responses to the exact regulatory boundaries of your trade.</p>
+            <p class="subtitle">Our framework aligns strategic outputs to the exact regulatory and liability boundaries of your specific trade.</p>
         </header>
         <div class="input-panel">
-            <label>Choose Your Industry Field to Launch Terminal Dashboard:</label>
+            <label>Choose Your Field to Launch the Crisis Workspace Terminal:</label>
             <div class="q-grid">
                 <div class="q-card" onclick="selectTrade('Contracting & Trades')">
-                    <h4>Contracting & Trades</h4>
-                    <p>HVAC, Plumbing, Electrical, and Roofing Services. Focuses on liability defense.</p>
+                    <h4>Contracting & Home Trades</h4>
+                    <p>HVAC, Plumbing, Electrical, and Roofing Services. Focuses on asset protection and liability insulation.</p>
                 </div>
                 <div class="q-card" onclick="selectTrade('Medical & Dental')">
-                    <h4>Medical & Clinical</h4>
-                    <p>Dental Offices, Private Clinics, and Care Centers. Rigorous patient privacy structures.</p>
+                    <h4>Medical, Dental & Clinical</h4>
+                    <p>Dental Offices, Private Clinics, and Care Providers. Enforces rigorous compliance and patient privacy.</p>
                 </div>
                 <div class="q-card" onclick="selectTrade('Hospitality & Restaurant')">
-                    <h4>Hospitality & Dining</h4>
-                    <p>Restaurants, Independent Cafes, and Boutique Hotels. Optimized for brand recovery.</p>
+                    <h4>Hospitality & Food Service</h4>
+                    <p>Restaurants, Independent Cafes, Bars, and Boutique Hotels. Optimized for brand pipeline recovery.</p>
                 </div>
                 <div class="q-card" onclick="selectTrade('General Professional')">
                     <h4>Professional Services</h4>
-                    <p>Law Firms, Consulting Practices, and Independent Agencies.</p>
+                    <p>Law Firms, Consulting Practices, Accounting Firms, and Independent Commercial Agencies.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SECTION II: THE MAIN WORKSPACE DASHBOARD (POPS POST SELECTION) -->
+    <!-- SECTION II: THE MAIN WORKSPACE DASHBOARD -->
     <div id="terminal-section" class="view-section">
         <header>
             <h1>Reputation Shield Workspace</h1>
@@ -207,7 +209,7 @@
         <div class="workspace">
             <div class="input-panel" id="inputPanel">
                 <label for="reviewText">Paste Unverified Public Review Statement</label>
-                <textarea id="reviewText" placeholder="Paste the exact text of the negative review here..."></textarea>
+                <textarea id="reviewText" placeholder="Paste the exact text of the negative or unverified statement here..."></textarea>
 
                 <div class="form-row">
                     <div>
@@ -216,12 +218,6 @@
                     </div>
                     <div>
                         <label style="opacity: 0.5;">Current System Profile</label>
-                        <button onclick="switchSection('onboarding')" style="padding:12px; font-size:0.8rem; background:#666;">Change Industry Field</button>
+                        <button onclick="switchSection('onboarding')" style="padding:12px; font-size:0.8rem; background:#666; width:100%; color:#FFF; font-weight:600; text-transform:uppercase; letter-spacing:1px; border:none; cursor:pointer;">Change Industry Field</button>
                     </div>
                 </div>
-
-                <div style="margin-bottom:20px; display:none;" id="apiAuthContainer">
-                    <label for="premiumToken">Secure License Authentication String</label>
-                    <input type="password" id="premiumToken" placeholder="Enter secure enterprise license key received via Stripe confirmation receipt">
-                </div>
-
